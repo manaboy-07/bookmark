@@ -23,10 +23,16 @@
   transition: all 0.3s ease-in-out;
   color: var(--soft-red);
 }
-
+.login-nav:hover {
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border: 2px solid var(--soft-red);
+  background-color: #fff;
+  color: var(--soft-red);
+}
 .login-nav {
   border: 2px solid var(--soft-red);
-  color: var(--soft-red);
+  color: white;
+  background-color: var(--soft-red);
   padding: 4px;
   width: 100px;
 
@@ -52,7 +58,7 @@
 }
 .small-text {
   color: var(--grayish-blue);
-  font-size: 19px;
+  font-size: 18px;
 }
 .upper {
   height: 38vh;
@@ -141,4 +147,8 @@
   z-index: 999;
   width: 100%;
   height: 100vh;
+}
+.smt {
+  color: #242a45;
+  background-color: #5267df;
 }

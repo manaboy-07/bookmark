@@ -7,8 +7,10 @@ function Hero() {
       <div className="flex my-3 justify-between items-center px-12 m-3">
         <div>
           <div className="hero-text-section">
-            <h2 className="hero-text">A simple Bookmark Manager</h2>
-            <h3 className="small-text">
+            <h2 className="text-5xl font-semibold">
+              A simple Bookmark Manager
+            </h2>
+            <h3 className="small-text py-4">
               A clean and simple interface to organize your favourite websites.
               Open a new browser tab and see your sites load instantly. Try it
               for free.

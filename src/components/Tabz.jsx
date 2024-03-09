@@ -3,7 +3,7 @@ import Button from "./Button";
 
 function Tabz({ src, text, header }) {
   return (
-    <div className="flex p-12 mx-4 flex-wrap-reverse justify-between items-center">
+    <div className="flex p-12 mx-4 lg:flex-row sm:flex-col-reverse justify-between items-center">
       <div className="my-3 ml-4">
         <img src={src} alt="" />
       </div>

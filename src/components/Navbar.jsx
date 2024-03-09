@@ -1,24 +1,32 @@
 import React from "react";
 import { HiOutlineX } from "react-icons/hi";
 import logo from "../images/logo-bookmark.svg";
+import facebook from "../images/icon-facebook.svg";
+import twitter from "../images/icon-twitter.svg";
+import hamburger from "../images/icon-hamburger.svg";
 import mobileLogo from "../images/mobile-logo.svg";
 function Navbar() {
+  const [openModal, setOpenModal] = useState("");
   return (
     <>
       <div className="flex flex-row justify-between items-center px-12 py-6 m-3 mb-9">
         <div>
           <img src={logo} alt="logo" width={200} height={200} />
         </div>
-        <div>
-          <ul className="nav-list uppercase text-xl flex justify-between items-center">
+        <div className="sm:block hidden">
+          <ul className="nav-list uppercase  flex justify-between items-center">
             <li className="mx-2 ">Features</li>
             <li className="mx-2">Pricing</li>
             <li className="mx-2">Contact</li>
-            <li className="login-nav mx-2  rounded-md">Login</li>
+            <li className="login-nav mx-2 font-semibold  rounded-sm">Login</li>
           </ul>
         </div>
+        <div className="cursor-pointer sm:hidden block">
+          <img src={hamburger} alt="" />
+        </div>
       </div>
-      <div className="lg:hidden sm:block flex flex-col">
+      {/* Modal */}
+      {/* <div className="lg:hidden sm:block flex flex-col">
         <section className="overlay">
           <div className="my-modal">
             <div className="modal-container">
@@ -84,10 +92,14 @@ function Navbar() {
                   </li>
                 </ul>
               </div>
+              <div className="flex p-4">
+                <img className="mx-3 cursor-pointer" src={facebook} alt="" />
+                <img className="mx-3 cursor-pointer" src={twitter} alt="" />
+              </div>
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
     </>
   );
 }
