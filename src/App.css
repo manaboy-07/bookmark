@@ -1,38 +1,144 @@
-.App {
+:root {
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+
+  --grayish-blue: hsl(229, 8%, 60%);
+  --very-dark-blue: hsl(229, 31%, 21%);
+}
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-list li {
+  width: 100px;
+  height: 35px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-list li:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--soft-red);
+}
+
+.login-nav {
+  border: 2px solid var(--soft-red);
+  color: var(--soft-red);
+  padding: 4px;
+  width: 100px;
+
+  height: 35px;
+}
+.chrome-btn {
+  border: 3px solid var(--soft-blue);
+  color: var(--soft-blue);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.firefox-btn {
+  border: 3px solid var(--very-dark-blue);
+  color: var(--very-dark-blue);
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-text {
+  font-size: 56px;
+  color: var(--very-dark-blue);
+  font-weight: 500;
 }
+.hero-text-section {
+  width: 560px;
+}
+.small-text {
+  color: var(--grayish-blue);
+  font-size: 19px;
+}
+.upper {
+  height: 38vh;
+  background-color: var(--soft-blue);
+}
+.lower {
+  background-color: var(--very-dark-blue);
+}
+.form-btn {
+  border: 1px solid var(--soft-red);
+  color: var(--soft-red);
+}
+.error {
+  width: 250px;
+  height: 25px;
+  color: white;
+  font-style: italic;
+  background-color: var(--soft-red);
+}
+.extension-container {
+  width: 290px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -webkit-box-shadow: -1px 7px 14px 0px rgba(240, 240, 240, 1);
+  -moz-box-shadow: -1px 7px 14px 0px rgba(240, 240, 240, 1);
+  box-shadow: -1px 7px 14px 0px rgba(240, 240, 240, 1);
+}
+.extension-btn {
+  color: white;
+  padding: 6px;
+  border: 3px solid var(--soft-blue);
+  background-color: var(--soft-blue);
+}
+.extension-btn:hover {
+  transition: all 0.4s ease;
+  background-color: rgb(255, 255, 255);
+  color: var(--soft-blue);
+}
+.more-info {
+  background-color: var(--soft-blue);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+/* faq */
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.7s cubic-bezier(0, 1, 0, 1);
+  -webkit-transition: all 0.7s cubic-bezier(0, 1, 0, 1);
+  -moz-transition: all 0.7s cubic-bezier(0, 1, 0, 1);
+  -ms-transition: all 0.7s cubic-bezier(0, 1, 0, 1);
+  -o-transition: all 0.7s cubic-bezier(0, 1, 0, 1);
+}
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.7s cubic-bezier(1, 0, 1, 0);
+  -webkit-transition: all 0.7s cubic-bezier(1, 0, 1, 0);
+  -moz-transition: all 0.7s cubic-bezier(1, 0, 1, 0);
+  -ms-transition: all 0.7s cubic-bezier(1, 0, 1, 0);
+  -o-transition: all 0.7s cubic-bezier(1, 0, 1, 0);
+}
+.faq-container {
+  border-bottom: 1px solid rgb(59, 60, 60);
+}
+.title-faq:hover .question-faq {
+  color: var(--soft-red);
+  transition: all 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* MOdal */
+.my-modal {
+  position: fixed;
+  top: 40%;
+  z-index: 99999;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.overlay {
+  background-color: var(--very-dark-blue);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
 }
