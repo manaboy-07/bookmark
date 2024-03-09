@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/logo-footer.svg";
 import facebook from "../images/icon-facebook.svg";
 import twitter from "../images/icon-twitter.svg";
+
 import error from "../images/icon-error.svg";
 
 function Footer() {
+  const [email, setEmail] = useState("");
+  const [isValid, setIsValid] = useState(true);
+  const [emailExists, setEmailExists] = useState(true);
+
+  const validateEmail = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    setIsValid(emailRegex.test(email));
+    if (email === "" || isValid === false) {
+      setEmailExists(false);
+      setTimeout(() => {
+        setEmailExists(true);
+      }, 5000);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    validateEmail();
+    setEmail("");
+  };
   return (
     <div className="">
       <div
@@ -22,7 +47,10 @@ function Footer() {
         >
           Stay up-to-date with what <br /> we're doing
         </h2>
-        <form className="flex flex-col lg:flex-row my-3">
+        <form
+          className="flex flex-col lg:flex-row my-3"
+          onSubmit={handleSubmit}
+        >
           <div>
             <div
               style={{
@@ -33,16 +61,21 @@ function Footer() {
             >
               <input
                 type="email"
-                required
+                onChange={handleInputChange}
+                value={email}
                 width={150}
                 className="outline-none  border-0"
               />
-              <img src={error} alt="" className="" width={20} height={10} />
+              {emailExists ? null : (
+                <img src={error} alt="" className="" width={20} height={10} />
+              )}
             </div>
 
-            <h5 className="error rounded-b-md">
-              Whoops! , make sure it's an email
-            </h5>
+            {emailExists ? null : (
+              <h5 className="error rounded-b-md">
+                Whoops! , make sure it's an email
+              </h5>
+            )}
           </div>
 
           <button
@@ -73,8 +106,8 @@ function Footer() {
           </ul>
         </div>
         <div className="flex p-4">
-          <img className="mx-3 cursor-pointer" src={facebook} alt="" />
-          <img className="mx-3 cursor-pointer" src={twitter} alt="" />
+          <img className="mx-3 cursor-pointer" src={facebook} alt="fb" />
+          <img className="mx-3 cursor-pointer" src={twitter} alt="twet" />
         </div>
       </div>
     </div>

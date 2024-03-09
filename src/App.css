@@ -10,6 +10,9 @@
   justify-content: center;
   align-items: center;
 }
+.App {
+  overflow-x: hidden;
+}
 .nav-list li {
   width: 100px;
   height: 35px;
@@ -45,12 +48,26 @@
   height: 35px;
 }
 .chrome-btn {
-  border: 3px solid var(--soft-blue);
-  color: var(--soft-blue);
+  background-color: var(--soft-blue);
+  color: #fff;
   text-align: center;
 }
+.chrome-btn:hover {
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border: 1px solid var(--soft-blue);
+  color: var(--soft-blue);
+}
 .firefox-btn {
-  border: 3px solid var(--very-dark-blue);
+  background-color: rgb(227, 227, 227);
+  color: #171717;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+.firefox-btn:hover {
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border: 1px solid var(--very-dark-blue);
   color: var(--very-dark-blue);
   text-align: center;
 }
@@ -82,7 +99,7 @@
   background-color: var(--soft-red);
 }
 .extension-container {
-  width: 290px;
+  width: 240px;
 
   -webkit-box-shadow: -1px 7px 14px 0px rgba(240, 240, 240, 1);
   -moz-box-shadow: -1px 7px 14px 0px rgba(240, 240, 240, 1);
@@ -124,6 +141,7 @@
 }
 .faq-container {
   border-bottom: 1px solid rgb(59, 60, 60);
+  width: 130%;
 }
 .title-faq:hover .question-faq {
   color: var(--soft-red);

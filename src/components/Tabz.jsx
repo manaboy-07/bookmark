@@ -3,11 +3,11 @@ import Button from "./Button";
 
 function Tabz({ src, text, header }) {
   return (
-    <div className="flex p-12 mx-4  flex-col-reverse lg:flex-row justify-between items-center">
+    <div className="flex p-12 mx-4  flex-col lg:flex-row justify-between items-center">
       <div className="my-3 ml-4">
         <img src={src} alt="" />
       </div>
-      <div className="my-4 ml-5 p-3 mr-16">
+      <div className="my-4 ml-5 p-3 mr-16  text-center lg:text-start">
         <h1
           className="font-bold my-4"
           style={{

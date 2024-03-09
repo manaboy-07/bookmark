@@ -85,12 +85,13 @@ export default function BasicTabs() {
           sx={{
             borderBottom: 1,
             borderColor: "divider",
-            marginRight: "20%",
-            marginLeft: "20%",
+            marginRight: "5%",
+            marginLeft: "5%",
           }}
         >
           <ThemeProvider theme={theme}>
             <Tabs
+              className="flex flex-col"
               value={value}
               onChange={handleChange}
               textColor="primary"

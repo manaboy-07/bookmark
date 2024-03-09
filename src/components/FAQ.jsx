@@ -41,7 +41,7 @@ function FAQ() {
         <h2
           className="font-bold my-3"
           style={{
-            fontSize: "28px",
+            fontSize: "24px",
           }}
         >
           Frequently Asked Questions
@@ -58,11 +58,9 @@ function FAQ() {
               className="title-faq m-2 flex items-center cursor-pointer justify-between"
               onClick={() => toggle(i)}
             >
-              <h2 className="font-bold question-faq text-xl">
-                {item.question}
-              </h2>
+              <h2 className="font-bold question-faq ">{item.question}</h2>
               {/* */}
-              <span className="cursor-pointer text-2xl">
+              <span className="cursor-pointer text-xl">
                 {selected === i ? (
                   <IoIosArrowUp
                     style={{

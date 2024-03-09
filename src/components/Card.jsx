@@ -4,7 +4,7 @@ import chrome from "../images/logo-chrome.svg";
 function Card({ src, ver, browser, mt }) {
   return (
     <div
-      className={`p-8 flex ${
+      className={`p-5 flex ${
         mt ? mt : null
       } mx-4 my-4 justify-center items-center extension-container`}
     >
@@ -18,7 +18,7 @@ function Card({ src, ver, browser, mt }) {
         <button
           style={{
             height: "40px",
-            width: "260px",
+            width: "200px",
             fontSize: "16px",
           }}
           className="extension-btn my-3 mt-4 rounded-md font-bold cursor-pointer"

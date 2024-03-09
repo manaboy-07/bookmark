@@ -7,7 +7,7 @@ import Firefox from "../images/logo-firefox.svg";
 
 function Extension() {
   return (
-    <div className="p-5 text-center flex flex-col justify-center items-center">
+    <div className="p-5 mr-5 text-center flex flex-col justify-center items-center">
       <div>
         <h2
           className="font-bold"
