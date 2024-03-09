@@ -85,8 +85,8 @@ export default function BasicTabs() {
           sx={{
             borderBottom: 1,
             borderColor: "divider",
-            marginRight: "29%",
-            marginLeft: "29%",
+            marginRight: "20%",
+            marginLeft: "20%",
           }}
         >
           <ThemeProvider theme={theme}>

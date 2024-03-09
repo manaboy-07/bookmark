@@ -23,11 +23,17 @@
   transition: all 0.3s ease-in-out;
   color: var(--soft-red);
 }
-.login-nav:hover {
+.login-nav:hover,
+.form-btn:hover {
   transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   border: 2px solid var(--soft-red);
   background-color: #fff;
   color: var(--soft-red);
+}
+.form-btn {
+  border: 2px solid var(--soft-red);
+  color: white;
+  background-color: var(--soft-red);
 }
 .login-nav {
   border: 2px solid var(--soft-red);
@@ -67,10 +73,7 @@
 .lower {
   background-color: var(--very-dark-blue);
 }
-.form-btn {
-  border: 1px solid var(--soft-red);
-  color: var(--soft-red);
-}
+
 .error {
   width: 250px;
   height: 25px;
@@ -146,9 +149,14 @@
   top: 0;
   z-index: 999;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
 }
 .smt {
   color: #242a45;
   background-color: #5267df;
+}
+.cancel-icon:hover {
+  background-color: rgb(119, 117, 117);
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }

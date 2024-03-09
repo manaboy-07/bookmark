@@ -22,14 +22,14 @@ function Footer() {
         >
           Stay up-to-date with what <br /> we're doing
         </h2>
-        <form className="flex my-3">
+        <form className="flex flex-col lg:flex-row my-3">
           <div>
             <div
               style={{
                 height: "40.5px",
                 width: "250px",
               }}
-              className=" flex p-2 bg-white justify-between rounded-md "
+              className=" flex p-2 bg-white justify-between rounded-sm "
             >
               <input
                 type="email"
@@ -50,26 +50,26 @@ function Footer() {
             style={{
               height: "40.5px",
             }}
-            className="capitalize rounded-md mx-2 p-2 bg-white form-btn"
+            className="capitalize my-3 lg:my-0 rounded-sm mx-0 lg:mx-2 p-2  form-btn"
           >
             Contact us
           </button>
         </form>
       </div>
-      <div className="lower px-6 flex justify-between items-center">
+      <div className="lower px-6 flex flex-col lg:flex-row  justify-between items-center">
         <div>
           <ul
             style={{
               fontSize: "16px",
             }}
-            className="nav-list text-white text-xl flex justify-between items-center"
+            className="nav-list text-white text-xl flex flex-col lg:flex-row justify-between items-center"
           >
             <li>
               <img src={logo} alt="" width={150} height={150} />
             </li>
-            <li className="mx-2 uppercase ">Features</li>
-            <li className="mx-2 uppercase">Pricing</li>
-            <li className="mx-2 uppercase">Contact</li>
+            <li className="mx-2 uppercase my-2 lg:my-0">Features</li>
+            <li className="mx-2 uppercase  my-2 lg:my-0">Pricing</li>
+            <li className="mx-2 uppercase  my-2 lg:my-0">Contact</li>
           </ul>
         </div>
         <div className="flex p-4">
