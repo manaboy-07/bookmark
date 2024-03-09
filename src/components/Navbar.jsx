@@ -1,12 +1,29 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { HiOutlineX } from "react-icons/hi";
 import logo from "../images/logo-bookmark.svg";
 import facebook from "../images/icon-facebook.svg";
 import twitter from "../images/icon-twitter.svg";
 import hamburger from "../images/icon-hamburger.svg";
 import mobileLogo from "../images/mobile-logo.svg";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 function Navbar() {
   const [openModal, setOpenModal] = useState(false);
+  const mobileContainer = useRef(null);
+  useGSAP(
+    () => {
+      gsap.from(".mobile-nav-list", {
+        y: -600,
+        scale: 0.2,
+        duration: 1.2,
+        ease: "power2.inOut",
+        stagger: {
+          each: 0.4,
+        },
+      });
+    },
+    { dependencies: [openModal], scope: mobileContainer }
+  );
 
   return (
     <>
@@ -67,9 +84,12 @@ function Navbar() {
                   </div>
                 </div>
                 <div>
-                  <ul className="mobile-nav text-center cursor-pointer  uppercase text-white text-2xl flex flex-col justify-between items-center">
+                  <ul
+                    ref={mobileContainer}
+                    className="mobile-nav  text-center cursor-pointer  uppercase text-white text-2xl flex flex-col justify-between items-center"
+                  >
                     <li
-                      className="mx-2 my-2   p-3"
+                      className="mx-2 my-2 mobile-nav-list  p-3"
                       style={{
                         width: "350px",
 
@@ -79,7 +99,7 @@ function Navbar() {
                       Features
                     </li>
                     <li
-                      className="mx-2 my-2  p-4"
+                      className="mx-2 mobile-nav-list my-2  p-4"
                       style={{
                         width: "350px",
 
@@ -89,7 +109,7 @@ function Navbar() {
                       Pricing
                     </li>
                     <li
-                      className="mx-2  my-2 p-4"
+                      className="mx-2 mobile-nav-list my-2 p-4"
                       style={{
                         width: "350px",
 
@@ -99,7 +119,7 @@ function Navbar() {
                       Contact
                     </li>
                     <li
-                      className="mobile-login-nav font-semibold  p-3 my-3 mx-2  rounded-md"
+                      className="mobile-login-nav mobile-nav-list font-semibold  p-3 my-3 mx-2  rounded-md"
                       style={{
                         width: "350px",
                         border: "3px solid white",
